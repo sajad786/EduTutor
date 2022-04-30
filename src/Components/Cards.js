@@ -90,6 +90,9 @@ const Cards = ({data}) => {
         data={userData}
         renderItem={PostContent}
         extraData={userData.id}
+        ListFooterComponent={() => (
+          <View style={{height: moderateScaleVertical(24)}} />
+        )}
       />
     </View>
   );
