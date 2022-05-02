@@ -1,18 +1,16 @@
-import {View, Text} from 'react-native';
 import React from 'react';
-import {Courses, Home, PreBoarding, Profile, Reels} from '../Screens';
 import navigationStrings from '../constants/navigationStrings';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Login, PreBoarding, Signup} from '../Screens';
 
-const AuthStack = () => {
-  const Stack = createNativeStackNavigator();
+const AuthStack = Stack => {
   return (
     <Stack.Navigator
       initialRouteName={navigationStrings.HOME}
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name={navigationStrings.PREBOARDING} component={PreBoarding} />
+      <Stack.Screen name={navigationStrings.PREBOARDING} component={Signup} />
+      <Stack.Screen name={navigationStrings.PREBOARDING} component={Login} />
     </Stack.Navigator>
   );
 };

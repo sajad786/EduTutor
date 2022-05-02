@@ -7,4 +7,6 @@ export default {
   REELS: 'Reels',
   COURSES: 'Courses',
   PREBOARDING: 'PreBoarding',
+  TAB_STACK: 'TabStack',
+  INTRO_STACK: 'IntroStack',
 };

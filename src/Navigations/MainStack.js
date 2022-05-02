@@ -2,24 +2,18 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { Courses, Home, Profile, Reels } from '../Screens';
 import navigationStrings from '../constants/navigationStrings';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import TabStack from './TabStack';
 
-
-
-const MainStack = () => {
-    const Stack = createNativeStackNavigator();
+const MainStack = Stack => {
   return (
     <Stack.Navigator
-      initialRouteName={navigationStrings.HOME}
+      initialRouteName={navigationStrings.TAB_STACK}
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name={navigationStrings.HOME} component={Home} />
-      <Stack.Screen name={navigationStrings.PROFILE} component={Profile} />
-      <Stack.Screen name={navigationStrings.COURSES} component={Courses} />
-      <Stack.Screen name={navigationStrings.REELS} component={Reels} />
+      <Stack.Screen name={navigationStrings.TAB_STACK} component={TabStack} />
     </Stack.Navigator>
   );
-}
+};
 
 export default MainStack;
